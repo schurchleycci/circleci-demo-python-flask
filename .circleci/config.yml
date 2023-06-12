@@ -52,9 +52,9 @@ jobs:
           key: deps2-{{ checksum "requirements/dev.txt" }}
       - run:
           command: |
-            #python3 -m venv venv
-            #. venv/bin/activate
-            pip install -r requirements/dev.txt
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
       - save_cache:
           key: deps2-{{ checksum "requirements/dev.txt" }}
           paths:
